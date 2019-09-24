@@ -26,7 +26,7 @@ class Recipe extends Component{
                     <li className="collection-item">
                             <label>
                                 <input type="checkbox" ref="insurance" onChange= {this.handleChecked} />
-                                <span>Assurance annulation (+150€)</span>
+                                <span>Assurance annulation (+50€)</span>
                             </label>
                         </li>
                         <li className="collection-item"><b>Total: {this.props.total} €</b></li>

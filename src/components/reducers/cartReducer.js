@@ -96,14 +96,14 @@ const cartReducer= (state = initState,action)=>{
     if(action.type=== ADD_INSURANCE){
           return{
               ...state,
-              total: state.total + 150
+              total: state.total + 50
           }
     }
 
     if(action.type=== 'SUB_INSURANCE'){
         return{
             ...state,
-            total: state.total - 150
+            total: state.total - 50
         }
   }
     
