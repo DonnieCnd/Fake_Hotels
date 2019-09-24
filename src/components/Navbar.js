@@ -10,7 +10,7 @@ import logo from "../images/logoHotel.png";
                     <ul className="right">
                         <li><Link to="/">Hotels</Link></li>
                         <li><Link to="/cart">Panier</Link></li>
-                        <li><Link to="/cart"><i className="material-icons">shopping_cart</i></Link></li>
+                        <li><Link to="/cart"><i className="material-icons" id="shopping">shopping_cart</i></Link></li>
                     </ul>
                 </div>
             </nav>

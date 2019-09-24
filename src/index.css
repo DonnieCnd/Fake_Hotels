@@ -3,9 +3,30 @@
     justify-content: space-between;
     flex-wrap: wrap
 }
-
+.boxButton{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap
+}
+.next {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap
+}
 h3 {
     color: #ee6e73;
+}
+h5 {
+    color: #ee6e73;
+}
+#registerButton {
+    margin-right: 17%;
+}
+#shopping {
+    margin-top: 15%;
+}
+.white-text {
+    color: white;
 }
 .image-hotel {
     height: 200px;
@@ -16,6 +37,12 @@ h3 {
 }
 .card{
     width: 400px;
+}
+.confirmCard {
+    width: 700px;
+}
+.confirm {
+    text-align: center;
 }
 .card .card-image .card-title{
     color: black;

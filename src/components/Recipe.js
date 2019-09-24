@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 //import { addShipping } from './actions/cartActions'
 class Recipe extends Component{
     
@@ -30,8 +31,8 @@ class Recipe extends Component{
                         </li>
                         <li className="collection-item"><b>Total: {this.props.total} €</b></li>
                     </div>
-                    <div className="checkout">
-                        <button className="waves-effect waves-light btn">Continuer</button>
+                    <div className="next">
+                        <button className="waves-effect waves-light btn"><Link to="/register" class="white-text">Continuer</Link></button>
                     </div>
                  </div>
         )
