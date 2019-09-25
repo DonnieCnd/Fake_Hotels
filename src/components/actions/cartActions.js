@@ -1,5 +1,5 @@
 
-import { ADD_TO_CART,REMOVE_HOTEL,SUB_NIGHT,ADD_NIGHT,ADD_INSURANCE} from './action-types/cart-actions'
+import { ADD_TO_CART,REMOVE_HOTEL,SUB_NIGHT,ADD_NIGHT, CLEAR_CART } from './action-types/cart-actions'
 
 
 export const addToCart= (id)=>{
@@ -27,5 +27,11 @@ export const addNight=(id)=>{
     return{
         type: ADD_NIGHT,
         id
+    }
+}
+
+export const clearCart= ()=>{
+    return {
+        type: CLEAR_CART
     }
 }

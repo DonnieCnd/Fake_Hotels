@@ -1,4 +1,4 @@
-import { ADD_TO_CART,REMOVE_HOTEL,SUB_NIGHT,ADD_NIGHT,ADD_INSURANCE } from '../actions/action-types/cart-actions'
+import { ADD_TO_CART,REMOVE_HOTEL,SUB_NIGHT,ADD_NIGHT,ADD_INSURANCE, CLEAR_CART } from '../actions/action-types/cart-actions'
 
 
 const initState = {
@@ -27,7 +27,6 @@ const cartReducer= (state = initState,action)=>{
         }
          else{
             addedItem.quantity = 1;
-            //calculating the total
             state.addedItems.push(addedItem);
             state.total=0;
             state.addedItems.forEach(element => {
@@ -45,16 +44,15 @@ const cartReducer= (state = initState,action)=>{
         let itemToRemove= state.addedItems.find(item=> action.id === item.id)
         let new_items = state.addedItems.filter(item=> action.id !== item.id)
         
-        //calculating the total
+
         let newTotal = state.total - (itemToRemove.price * itemToRemove.quantity )
-        console.log(itemToRemove)
         return{
             ...state,
             addedItems: new_items,
             total: newTotal
         }
     }
-    //INSIDE CART COMPONENT
+
     if(action.type=== ADD_NIGHT){
         let addedItem = state.addedItems.find(item=> item.id === action.id)
           addedItem.quantity += 1 
@@ -66,7 +64,7 @@ const cartReducer= (state = initState,action)=>{
     }
     if(action.type=== SUB_NIGHT){  
         let addedItem = state.addedItems.find(item=> item.id === action.id) 
-        //if the qt == 0 then it should be removed
+
         if(addedItem.quantity === 1){
             let new_items = state.addedItems.filter(item=>item.id !== action.id)
             let newTotal = state.total - addedItem.price
@@ -99,7 +97,17 @@ const cartReducer= (state = initState,action)=>{
             ...state,
             total: state.total - 50
         }
-  }
+    }
+
+    if(action.type=== CLEAR_CART){
+        state.addedItems =[]
+        state.total =0;
+
+            return{
+            ...state,
+                total: 0
+                }
+    }
     
   else{
     return state

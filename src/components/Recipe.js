@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-//import { addShipping } from './actions/cartActions'
+
 class Recipe extends Component{
     
     componentWillUnmount() {
@@ -18,8 +18,7 @@ class Recipe extends Component{
         }
     }
 
-    render(){
-  
+    render(){ 
         return(
             <div className="container">
                 <form >
@@ -33,11 +32,11 @@ class Recipe extends Component{
                         <li className="collection-item"><b>Total: {this.props.total} €</b></li>
                     </div>
                     <div className="next">
-                        <button className="waves-effect waves-light btn"><Link to="/register" className="white-text">Continuer</Link></button>
+                        <Link to="/register" className="white-text waves-effect waves-light btn">Continuer</Link>
                     </div>
                     <br></br>
                 </form>
-                </div>
+            </div>
         )
     }
 }

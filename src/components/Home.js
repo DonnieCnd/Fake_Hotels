@@ -41,7 +41,7 @@ import { addToCart } from './actions/cartActions'
             return(
                 <div className="card" key={hotel.id}>
                     <div className="card-image">
-                        <img src={hotel.image} className="image-hotel"/>
+                        <img src={hotel.image} className="image-hotel" alt={hotel.name}/>
                         <span to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(hotel.id)}}><i className="material-icons">add</i></span>
                     </div>
 
@@ -54,7 +54,7 @@ import { addToCart } from './actions/cartActions'
                 </div>
             )
         })
-        const { error, isLoaded, hotels } = this.state;
+        const { error, isLoaded } = this.state;
         if (error) {
             return <div>Error: {error.message}</div>;
           } else if (!isLoaded) {

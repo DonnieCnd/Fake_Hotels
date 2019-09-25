@@ -25,26 +25,26 @@ class Cart extends Component{
                     return(
                        
                         <li className="collection-item avatar" key={item.id}>
-                                    <div className="item-img"> 
-                                        <img src={item.image} alt={item.image} className=""/>
-                                    </div>
-                                
-                                    <div className="item-desc">
-                                        <span className="title">{item.name}</span>
-                                        <p>{item.description}</p>
-                                        <br></br>
-                                        <p><b>Prix: {item.price} € / nuit</b></p> 
-                                        <p>
-                                            <b>Nuits: {item.quantity}</b> 
-                                        </p>
-                                        <div className="add-remove">
-                                            <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleAddNight(item.id)}}>arrow_drop_up</i></Link>
-                                            <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleSubtractNight(item.id)}}>arrow_drop_down</i></Link>
-                                        </div>
-                                        <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Supprimer</button>
-                                    </div>
-                                    
-                                </li>
+                            <div className="item-img"> 
+                                <img src={item.image} alt={item.image} className=""/>
+                            </div>
+                        
+                            <div className="item-desc">
+                                <span className="title">{item.name}</span>
+                                <p>{item.description}</p>
+                                <br></br>
+                                <p><b>Prix: {item.price} € / nuit</b></p> 
+                                <p>
+                                    <b>Nuits: {item.quantity}</b> 
+                                </p>
+                                <div className="add-remove">
+                                    <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleAddNight(item.id)}}>arrow_drop_up</i></Link>
+                                    <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleSubtractNight(item.id)}}>arrow_drop_down</i></Link>
+                                </div>
+                                <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Supprimer</button>
+                            </div>
+                            
+                        </li>
                          
                     )
                 })
@@ -71,7 +71,6 @@ class Cart extends Component{
 const mapStateToProps = (state)=>{
     return{
         items: state.addedItems,
-        //addedItems: state.addedItems
     }
 }
 const mapDispatchToProps = (dispatch)=>{
