@@ -22,19 +22,22 @@ class Recipe extends Component{
   
         return(
             <div className="container">
-                <div className="collection">
-                    <li className="collection-item">
-                            <label>
-                                <input type="checkbox" ref="insurance" onChange= {this.handleChecked} />
-                                <span>Assurance annulation (+50€)</span>
-                            </label>
-                        </li>
+                <form >
+                    <div className="collection">
+                        <li className="collection-item">
+                                <label>
+                                    <input type="checkbox" ref="insurance" onChange= {this.handleChecked} />
+                                    <span>Assurance annulation (+50€)</span>
+                                </label>
+                            </li>
                         <li className="collection-item"><b>Total: {this.props.total} €</b></li>
                     </div>
                     <div className="next">
-                        <button className="waves-effect waves-light btn"><Link to="/register" class="white-text">Continuer</Link></button>
+                        <button className="waves-effect waves-light btn"><Link to="/register" className="white-text">Continuer</Link></button>
                     </div>
-                 </div>
+                    <br></br>
+                </form>
+                </div>
         )
     }
 }

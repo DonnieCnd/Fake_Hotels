@@ -19,8 +19,9 @@ class Confirmation extends Component {
             </div>
                 <br></br>
             <div className="boxButton">
-                <button className="waves-effect waves-light btn" id="registerButton"><Link to="/" class="white-text">Accueil</Link></button>  
+                <button className="waves-effect waves-light btn" id="confirmButton"><Link to="/" className="white-text">Accueil</Link></button>  
             </div>
+            <br></br>
         </div>
     );
   }

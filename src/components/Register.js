@@ -66,7 +66,7 @@ class Register extends Component {
                     id="firstName"
                     name="firstName"
                     placeholder="Prénom"
-                    style={{ fontSize: "calc(0.4vw + 0.4vh + 0.4vmin)", margin: "10% auto 0 auto", width: "70%", marginLeft: "13%", }}
+                    style={{ fontSize: "calc(0.5vw + 0.5vh + 0.5vmin)", margin: "10% auto 0 auto", width: "70%", marginLeft: "13%", }}
                     onChange={this.onChange}
                     value={this.state.firstNamel}
                 />
@@ -75,7 +75,7 @@ class Register extends Component {
                     id="lastName"
                     name="lastName"
                     placeholder="Nom"
-                    style={{ fontSize: "calc(0.4vw + 0.4vh + 0.4vmin)", margin: "5% auto 0 auto", width: "70%", marginLeft: "13%", }}
+                    style={{ fontSize: "calc(0.5vw + 0.5vh + 0.5vmin)", margin: "5% auto 0 auto", width: "70%", marginLeft: "13%", }}
                     onChange={this.onChange}
                     value={this.state.lastName}
                 />
@@ -85,7 +85,7 @@ class Register extends Component {
                     name="email"
                     required
                     placeholder="Email *"
-                    style={{ fontSize: "calc(0.4vw + 0.4vh + 0.4vmin)", margin: "5% auto 0 auto", width: "70%", marginLeft: "13%", }}
+                    style={{ fontSize: "calc(0.5vw + 0.5vh + 0.5vmin)", margin: "5% auto 0 auto", width: "70%", marginLeft: "13%", }}
                     onChange={this.onChange}
                     value={this.state.email}
                 />
@@ -94,15 +94,16 @@ class Register extends Component {
                     id="address"
                     name="address"
                     placeholder="Adresse"
-                    style={{ fontSize: "calc(0.4vw + 0.4vh + 0.4vmin)", margin: "5% auto 10% auto", width: "70%", marginLeft: "13%", }}
+                    style={{ fontSize: "calc(0.5vw + 0.5vh + 0.5vmin)", margin: "5% auto 10% auto", width: "70%", marginLeft: "13%", }}
                     onChange={this.onChange}
                     value={this.state.address}
                 />
             </div>
                 <br></br>
             <div className="boxButton">
-                <button className="waves-effect waves-light btn" id="registerButton"><Link to="/confirmation" class="white-text">Commander</Link></button>  
+                <button className="waves-effect waves-light btn" id="registerButton"><Link to="/confirmation" className="white-text">Commander</Link></button>  
             </div>
+            <br></br>
             </form> 
         </div>
     );

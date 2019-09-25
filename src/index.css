@@ -1,6 +1,6 @@
 .box{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap
 }
 .boxButton{
@@ -21,6 +21,9 @@ h5 {
 }
 #registerButton {
     margin-right: 17%;
+}
+#confirmButton {
+    margin-right: 8%;
 }
 #shopping {
     margin-top: 15%;
